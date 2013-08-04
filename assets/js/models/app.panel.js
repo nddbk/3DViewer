@@ -12,6 +12,10 @@ var app = window.app || {};
 	'use strict';
 		
 	var L = app.panel = bj.createModel({
-		
+		init : function(){
+			
+		},
+		zoom : app.zoom,
+		rotate : app.rotate,
 	});
 })();

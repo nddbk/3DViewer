@@ -27,7 +27,7 @@
 			}
 		}
 		var ws = bj.getWindowSize();
-		//relayout(ws.w, ws.h);
+		relayout(ws.w, ws.h);
 		app.registerResize(relayout);
 	});
 	

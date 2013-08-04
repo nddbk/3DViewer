@@ -8,6 +8,8 @@
 	
 	APP_STATE = 1;
 	
+	var canvas, viewer;
+	
 	var clicks = [], resizes = [];
 	
 	function onclick(e, tg){
@@ -24,25 +26,87 @@
 	/*
 	 * load object data and render it
 	 */
-	function loadObject(){
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl', 'resources/objects/statue/TuongCTQ.obj');
-		viewer.setParameter('InitRotationX', 270);
-		viewer.setParameter('InitRotationY', 320);
-		viewer.setParameter('InitRotationZ', 0);
-		viewer.setParameter('ModelColor', '#ff0000');
-		viewer.setParameter('BackgroundColor1', '#ffffaa');
-		viewer.setParameter('BackgroundColor2', '#666633');
-		viewer.setParameter('RenderMode', 'smooth');
+	function loadObject(file, opts){
+		var op = opts || {};
+		var x = op.x || 0;
+		var y = op.y || 0;
+		var z = op.z || 0;
+		var modelColor = op.modelColor || '#ff0000';
+		var bgColorTop = op.bgColorTop || '#ffffaa';
+		var bgColorBottom = op.bgColorBottom || '#666633';
+		var renderMode = op.renderMode || 'smooth';
+		
+		viewer.setParameter('SceneUrl', file);
+		viewer.setParameter('InitRotationX', x);
+		viewer.setParameter('InitRotationY', y);
+		viewer.setParameter('InitRotationZ', z);
+		viewer.setParameter('ModelColor', modelColor);
+		viewer.setParameter('BackgroundColor1', bgColorTop);
+		viewer.setParameter('BackgroundColor2', bgColorBottom);
+		viewer.setParameter('RenderMode', renderMode);
 		viewer.setParameter('MipMapping', 'off');
-		//viewer.setMouseUsage('free');
-		//viewer.enableDefaultInputHandler(true);
+		viewer.setParameter('enableDefaultInputHandle', true);
+		viewer.setMouseUsage('pan');
 		viewer.init();
 		viewer.update();		
 	}
 	
-	// public general method
+	function zoom(k){
+		if(!!viewer){
+			viewer.zoomFactor += k;
+			viewer.update();
+		}
+	}
+	
+	function rotate(d){
+		if(!!viewer){
+			if(d=='bottom'){
+				viewer.rotMatrix.rotateAboutXAxis(5);
+			}	
+			else if(d=='top'){
+				viewer.rotMatrix.rotateAboutXAxis(-5);
+			}
+			else if(d=='left'){
+				viewer.rotMatrix.rotateAboutYAxis(-5);
+			}		
+			else if(d=='right'){
+				viewer.rotMatrix.rotateAboutYAxis(5);
+			}
+			viewer.update();	
+		}
+	}
+	
+	function onmousewheel(evt){
+		var e = window.event || evt;
+		bj.exitEvent(e);
+		var delta = e.detail? e.detail*(-120) : e.wheelDelta;
+		if(delta>0){
+			zoom(5);
+		}
+		else{
+			zoom(-5);
+		}
+	}	
+	
+	function onkeydown(e){
+		var k = e.which || e.keyCode;
+		if(k==37){
+			rotate('left');
+			bj.exitEvent(e);
+		}
+		if(k==39){
+			rotate('right');
+			bj.exitEvent(e);
+		}
+		if(k==38){
+			rotate('top');
+			bj.exitEvent(e);
+		}
+		if(k==40){
+			rotate('bottom');
+			bj.exitEvent(e);
+		}
+	}
 	
 	var app = _parent['app'] = {
 		getState : function(){
@@ -53,8 +117,27 @@
 			return k;
 		},
 		init : function(){
-			loadObject();
+			canvas = document.getElementById('cv');
+			viewer = new JSC3D.Viewer(canvas);
+			loadObject('resources/objects/statue/TuongCTQ.obj', {
+				x : 270, 
+				y : 360,
+				z : 0
+			});
+			
+			bj.listen(document.body, 'DOMMouseScroll', onmousewheel);
+			bj.listen(document.body, 'mousewheel', onmousewheel);		
+			bj.listen(document.body, 'keydown', onkeydown);	
+			
+			app.panel.View.start();
+			
+			app.viewer = viewer;
 		},
+		loadObj : function(file, opts){
+			return loadObject(file, opts);
+		},
+		rotate : rotate,
+		zoom : zoom,
 		storage : {
 			cacheTime : 1800,
 			selectDB : function(){
