@@ -1,0 +1,18 @@
+h1.site-title{width:100%;font:800 32px arial;color:#cf8;padding:25px 0px;text-shadow: 5px 5px 8px rgba(24, 15, 12, 0.8);text-align:center;}
+
+#workspace{
+	width:800px;height:400px;margin:auto;border:none;position:relative;
+	background : -webkit-linear-gradient(top, #ffffaa 00%, #666633 99%);
+	background : -moz-linear-gradient(top, #ffffaa 00%, #666633 99%);
+	background : -o-linear-gradient(top, #ffffaa 00%, #666633 99%);
+	background : -ms-linear-gradient(top, #ffffaa 00%, #666633 99%);
+	background : -linear-gradient(top, #ffffaa 00%, #666633 99%);	
+}
+#workspace #cv{
+	-webkit-box-shadow: 6px 8px 7px rgba(21, 11, 11, 0.8); 
+	-moz-box-shadow: 6px 8px 7px rgba(21, 11, 11, 0.8); 
+	box-shadow: 6px 8px 7px rgba(21, 11, 11, 0.8); 
+}
+#workspace #panel{
+	position:absolute;right:5px;bottom:5px;width:300px;height:30px;background-color:#000;opacity:0.7;
+}
