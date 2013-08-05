@@ -13,12 +13,13 @@ h1.site-title{width:100%;font:800 32px arial;color:#cf8;padding:25px 0px;text-sh
 	-webkit-box-shadow: 6px 8px 7px rgba(21, 11, 11, 0.8); 
 	-moz-box-shadow: 6px 8px 7px rgba(21, 11, 11, 0.8); 
 	box-shadow: 6px 8px 7px rgba(21, 11, 11, 0.8); 
-	cursor:move;
 }
 #workspace #panel{
 	position:absolute;right:5px;bottom:5px;height:26px;text-align:center;
 }
 #panel .btns{width:100%;height:100%;}
+
+#viewSource{position:absolute;left:8px;bottom:4px;}
 
 .btns .panel-item{margin:0px;padding:2px 5px;font:500 14px arial;color:#300;text-shadow: 1px 1px 2px rgba(24, 15, 12, 0.8);} 
 
