@@ -10,9 +10,9 @@ Template.panel = [
 	'<div class="btns">',
 		'<button class="panel-item" cmd="zoom-in" title="Wheel Up">Zoom-in</button>',
 		'<button class="panel-item" cmd="zoom-out" title="Wheel Down">Zoom-out</button>',
-		'<button class="panel-item" cmd="rotate-top" title="Up Arrow">Rotate Top</button>',
-		'<button class="panel-item" cmd="rotate-bottom" title="Down Arrow">Rotate Bottom</button>',
-		'<button class="panel-item" cmd="rotate-left" title="Left Arrow">Rotate Left</button>',
-		'<button class="panel-item" cmd="rotate-right" title="Right Arrow">Rotate Right</button>',
+		'<button class="panel-item" cmd="move-top" title="Up Arrow">Move Up</button>',
+		'<button class="panel-item" cmd="move-bottom" title="Down Arrow">Move Down</button>',
+		'<button class="panel-item" cmd="move-left" title="Left Arrow">Move Left</button>',
+		'<button class="panel-item" cmd="move-right" title="Right Arrow">Move Right</button>',
 	'</div>'
 ].join('');

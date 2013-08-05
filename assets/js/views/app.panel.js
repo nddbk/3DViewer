@@ -26,10 +26,10 @@ var app = window.app || {};
 					switch(rel){
 						case 'zoom-in' 			: R.Model.zoom(5); break;
 						case 'zoom-out' 		: R.Model.zoom(-5); break;
-						case 'rotate-left' 		: R.Model.rotate('left'); break;
-						case 'rotate-right' 	: R.Model.rotate('right'); break;
-						case 'rotate-top' 		: R.Model.rotate('top'); break;
-						case 'rotate-bottom' 		: R.Model.rotate('bottom'); break;
+						case 'move-left' 		: R.Model.move('left'); break;
+						case 'move-right' 		: R.Model.move('right'); break;
+						case 'move-top' 		: R.Model.move('top'); break;
+						case 'move-bottom' 		: R.Model.move('bottom'); break;
 					}
 				}
 			});

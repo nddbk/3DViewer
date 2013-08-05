@@ -46,7 +46,7 @@
 		viewer.setParameter('RenderMode', renderMode);
 		viewer.setParameter('MipMapping', 'off');
 		viewer.setParameter('enableDefaultInputHandle', true);
-		viewer.setMouseUsage('pan');
+		viewer.setMouseUsage('rotate');
 		viewer.init();
 		viewer.update();		
 	}
@@ -75,6 +75,24 @@
 			viewer.update();	
 		}
 	}
+
+	function translate(d){
+		if(!!viewer){
+			if(d=='bottom'){
+				viewer.rotMatrix.translate(0, -0.1, 0);
+			}	
+			else if(d=='top'){
+				viewer.rotMatrix.translate(0, 0.1, 0);
+			}
+			else if(d=='left'){
+				viewer.rotMatrix.translate(-0.1, 0, 0);
+			}		
+			else if(d=='right'){
+				viewer.rotMatrix.translate(0.1, 0, 0);
+			}
+			viewer.update();	
+		}		
+	}
 	
 	function onmousewheel(evt){
 		var e = window.event || evt;
@@ -91,19 +109,19 @@
 	function onkeydown(e){
 		var k = e.which || e.keyCode;
 		if(k==37){
-			rotate('left');
+			translate('left');
 			bj.exitEvent(e);
 		}
 		if(k==39){
-			rotate('right');
+			translate('right');
 			bj.exitEvent(e);
 		}
 		if(k==38){
-			rotate('top');
+			translate('top');
 			bj.exitEvent(e);
 		}
 		if(k==40){
-			rotate('bottom');
+			translate('bottom');
 			bj.exitEvent(e);
 		}
 	}
@@ -138,6 +156,7 @@
 		},
 		rotate : rotate,
 		zoom : zoom,
+		translate : translate,
 		storage : {
 			cacheTime : 1800,
 			selectDB : function(){
