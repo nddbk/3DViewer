@@ -78,17 +78,19 @@
 
 	function translate(d){
 		if(!!viewer){
+			var ratio = (viewer.definition == 'low') ? 0.5 : ((viewer.definition == 'high') ? 2 : 1);
+			ratio*=5;
 			if(d=='bottom'){
-				viewer.rotMatrix.translate(0, -0.1, 0);
+				viewer.panning[1] += ratio;
 			}	
 			else if(d=='top'){
-				viewer.rotMatrix.translate(0, 0.1, 0);
+				viewer.panning[1] -= ratio;
 			}
 			else if(d=='left'){
-				viewer.rotMatrix.translate(-0.1, 0, 0);
+				viewer.panning[0] -= ratio;
 			}		
 			else if(d=='right'){
-				viewer.rotMatrix.translate(0.1, 0, 0);
+				viewer.panning[0] += ratio;
 			}
 			viewer.update();	
 		}		
