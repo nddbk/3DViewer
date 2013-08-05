@@ -30,6 +30,7 @@ var app = window.app || {};
 						case 'move-right' 		: R.Model.move('right'); break;
 						case 'move-top' 		: R.Model.move('top'); break;
 						case 'move-bottom' 		: R.Model.move('bottom'); break;
+						case 'reset' 			: R.Model.reset(); break;
 					}
 				}
 			});

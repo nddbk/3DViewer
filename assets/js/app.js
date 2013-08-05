@@ -48,12 +48,18 @@
 		viewer.setParameter('enableDefaultInputHandle', true);
 		viewer.setMouseUsage('rotate');
 		viewer.init();
-		viewer.update();		
+		viewer.update();	
 	}
 	
 	function zoom(k){
 		if(!!viewer){
 			viewer.zoomFactor += k;
+			if(viewer.zoomFactor<5){
+				viewer.zoomFactor = 5;
+			}
+			else if(viewer.zoomFactor>500){
+				viewer.zoomFactor = 500;
+			}
 			viewer.update();
 		}
 	}
@@ -94,6 +100,11 @@
 			}
 			viewer.update();	
 		}		
+	}
+	
+	function reset(){
+		viewer.resetScene();
+		viewer.update();
 	}
 	
 	function onmousewheel(evt){
@@ -159,6 +170,7 @@
 		rotate : rotate,
 		zoom : zoom,
 		translate : translate,
+		reset : reset,
 		storage : {
 			cacheTime : 1800,
 			selectDB : function(){

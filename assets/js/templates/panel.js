@@ -14,5 +14,6 @@ Template.panel = [
 		'<button class="panel-item" cmd="move-bottom" title="Down Arrow">Move Down</button>',
 		'<button class="panel-item" cmd="move-left" title="Left Arrow">Move Left</button>',
 		'<button class="panel-item" cmd="move-right" title="Right Arrow">Move Right</button>',
+		'<button class="panel-item" cmd="reset" style="color:#900;">Reset</button>',
 	'</div>'
 ].join('');

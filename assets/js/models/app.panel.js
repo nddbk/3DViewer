@@ -18,5 +18,6 @@ var app = window.app || {};
 		zoom : app.zoom,
 		rotate : app.rotate,
 		move : app.translate,
+		reset : app.reset,
 	});
 })();
