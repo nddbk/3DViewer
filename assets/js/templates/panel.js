@@ -8,6 +8,11 @@ var Template = Template || {}
 
 Template.panel = [
 	'<div class="btns">',
+		'<select id="renderMode">',
+			'<option value="smooth">Solid</option>',
+			'<option value="point">Point</option>',
+			'<option value="wireframe">Wireframe</option>',
+		'</select>',
 		'<button class="panel-item" cmd="zoom-in" title="Wheel Up">Zoom-in</button>',
 		'<button class="panel-item" cmd="zoom-out" title="Wheel Down">Zoom-out</button>',
 		'<button class="panel-item" cmd="move-top" title="Up Arrow">Move Up</button>',

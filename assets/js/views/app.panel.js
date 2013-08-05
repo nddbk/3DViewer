@@ -13,7 +13,7 @@ var app = window.app || {};
 	
 	var R = bj.createView(app.panel, {
 		init : function(){
-			this.panel = bj.element('panel');
+			this.panel = bj.element('panel');		
 		},
 		start : function(){
 			var tpl = Template.panel;
@@ -34,6 +34,15 @@ var app = window.app || {};
 					}
 				}
 			});
+			
+			bj.listen('renderMode', 'change', function(){
+				var v = this.value;
+				R.Model.switchMode(v);
+			});
+
+			bj.listen(document.body, 'DOMMouseScroll', R.Model.onmousewheel);
+			bj.listen(document.body, 'mousewheel', R.Model.onmousewheel);		
+			bj.listen(document.body, 'keydown', R.Model.onkeydown);		
 		}
 	});
 })();
