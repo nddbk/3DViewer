@@ -43,6 +43,9 @@ var app = window.app || {};
 			bj.listen(document.body, 'DOMMouseScroll', R.Model.onmousewheel);
 			bj.listen(document.body, 'mousewheel', R.Model.onmousewheel);		
 			bj.listen(document.body, 'keydown', R.Model.onkeydown);		
+		},
+		resetPanel : function(){
+			bj.element('renderMode').selectedIndex = 0;
 		}
 	});
 })();

@@ -75,8 +75,10 @@ var app = window.app || {};
 	
 	function reset(){
 		viewer = getViewer();
+		viewer.setRenderMode('solid');
 		viewer.resetScene();
 		viewer.update();
+		L.View.resetPanel();
 	}
 	
 	function switchMode(mode){
