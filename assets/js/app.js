@@ -75,7 +75,7 @@
 		viewer.update();
 		
 		var oLoader = new JSC3D.ObjLoader(function(scene){
-			viewer.setDefinition('high');
+			//viewer.setDefinition('high');
 			viewer.replaceScene(scene);
 			if(textures.length>0){
 				for(var i=0;i<textures.length;i++){

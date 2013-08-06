@@ -1,0 +1,45 @@
+#
+# Studio
+#
+# Materials for the file "CTQ.obj"
+#
+
+
+newmtl default
+   Ka 0.500000 0.500000 0.500000
+   Kd 0.500000 0.500000 0.500000
+   Ks 0.500000 0.500000 0.500000
+   Tf 0.500000 0.500000 0.500000
+   illum 1
+   d 1
+   Ns 6
+   sharpness 60
+   Ni 1
+
+newmtl m1
+   Ka 0.500000 0.500000 0.500000
+   Kd 0.500000 0.500000 0.500000
+   Ks 0.500000 0.500000 0.500000
+   Tf 0.500000 0.500000 0.500000
+   illum 1
+   d 1
+   Ns 6
+   sharpness 60
+   Ni 1
+   map_Kd CTQImage1.png
+   map_bump CTQBump1.png
+
+newmtl m2
+   Ka 0.500000 0.500000 0.500000
+   Kd 0.500000 0.500000 0.500000
+   Ks 0.500000 0.500000 0.500000
+   Tf 0.500000 0.500000 0.500000
+   illum 1
+   d 1
+   Ns 6
+   sharpness 60
+   Ni 1
+   map_Kd CTQImage2.png
+   map_bump CTQBump2.png
+
+# end of file

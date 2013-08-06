@@ -13,10 +13,12 @@ var app = window.app || {};
 	
 	var objList = [
 		{
+			title : 'Liberty',
 			image : 'resources/Liberty.png', 
 			path : 'resources/objects/LibertyStatue/LibertStatue.obj'
 		},
 		{
+			title : 'Cathedral',
 			image : 'resources/court.png', 
 			path : 'resources/objects/court/court.obj',
 			config : {
@@ -25,8 +27,9 @@ var app = window.app || {};
 			}
 		},
 		{
+			title : 'CTQ statue - High quality',
 			image : 'resources/statue.png', 
-			path : 'resources/objects/statue/TuongCTQ.obj', 
+			path : 'resources/objects/statue/CTQ.obj', 
 			config : {
 				x : 270,
 				y : 360,
@@ -34,15 +37,17 @@ var app = window.app || {};
 			}
 		},
 		{
+			title : 'CTQ statue - Simple version',
 			image : 'resources/statue-base.png', 
-			path : 'resources/objects/statue/CTQ_de_texture.obj',
+			path : 'resources/objects/statue/CTQsmall.obj',
 			config : {
-				x : 160,
-				y : 30,
-				z : 30
+				x : 270,
+				y : 360,
+				z : 0
 			}
 		},
 		{
+			title : 'News Stand',
 			image : 'resources/stand.png', 
 			path : 'resources/objects/NewsStand/NewsStand.obj'
 		}
@@ -66,6 +71,7 @@ var app = window.app || {};
 				var img = bj.addElement('DIV', ls);
 				img.addClass('item');
 				img.setAttribute('style', 'cursor:pointer;background:transparent url('+item.image+') no-repeat center center;');
+				img.setAttribute('title', 'Click to load '+item.title);
 				img.onclick = function(){
 					R.startLoad({
 						path : item.path,
