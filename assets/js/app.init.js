@@ -19,16 +19,6 @@
 			var ws = bj.getWindowSize();
 			return app.onresize(ws.w, ws.h);
 		});	
-			
-		var container = bj.element('container');
-		var relayout = function(w, h){
-			if(!!container){
-				container.setSize(w, h);
-			}
-		}
-		var ws = bj.getWindowSize();
-		relayout(ws.w, ws.h);
-		app.registerResize(relayout);
 	});
 	
 	app.init();

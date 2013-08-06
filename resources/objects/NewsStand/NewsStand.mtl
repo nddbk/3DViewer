@@ -1,0 +1,233 @@
+newmtl DecoMetal03
+Ns 1
+Ka 0.1 0.4 0.2
+Kd 1 1 1
+Ks 0.0313726 0.0313726 0.0313726
+map_Kd MetalDeco3.jpg
+newmtl DecoMetal02
+Ns 1
+Ka 0.1 0.4 0.2
+Kd 1 1 1
+Ks 0.0235294 0.0235294 0.0235294
+map_Kd MetalDeco2.jpg
+newmtl DecoMetal01
+Ns 1
+Ka 0.1 0.4 0.2
+Kd 1 1 1
+Ks 0.027451 0.027451 0.027451
+map_Kd MetalDeco1.jpg
+newmtl MainNewsStand
+Ns 1
+Ka 0.1 0.4 0.2
+Kd 1 1 1
+Ks 0.027451 0.027451 0.027451
+map_Kd MetalBase.jpg
+newmtl RoofNewsStand
+Ns 4
+Ka 0.7 0.4 0.2
+Kd 1 1 1
+Ks 0.239216 0.239216 0.239216
+map_Kd BronzeRoof02.jpg
+newmtl InsideNewsStand1
+Ns 4
+Ka 0.5 0.4 0.4
+Kd 1 1 1
+Ks 0 0 0
+map_Kd StandInside1.jpg
+newmtl Newspapers03
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Newspapers03.jpg
+newmtl Magazines09
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Magazines09.jpg
+newmtl Magazines01
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Magazines01.jpg
+newmtl Comics01
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Comics01.jpg
+newmtl Newspapers01
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Newspapers01.jpg
+newmtl Magazines02
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Magazines02.jpg
+newmtl Newspapers02
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Newspapers02.jpg
+newmtl Magazines03
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Magazines03.jpg
+newmtl Books01
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Books01.jpg
+newmtl Magazines08
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Magazines08.jpg
+newmtl Gate1
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0.129412 0.129412 0.129412
+map_Kd RollerShutter.jpg
+newmtl Labels01
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Labels01.jpg
+newmtl Labels02
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Labels02.jpg
+newmtl Labels03
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Labels03.jpg
+newmtl InsideNewsStand2
+Ns 4
+Ka 0.7 0.7 0.7
+Kd 1 1 1
+Ks 0 0 0
+map_Kd MetalBase2.jpg
+newmtl Floor2
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd MetalFloor01.jpg
+newmtl ChairMetal
+Ns 0.01
+Ka 0.8 0.8 0.9
+Kd 1 1 1
+Ks 0.192157 0.192157 0.192157
+map_Kd ChairMetal.jpg
+newmtl Tent
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Tent2.jpg
+newmtl MetalPanels2
+Ns 50
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+map_Kd MetalPanel02.jpg
+newmtl MetalPanels1
+Ns 50
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.0431373 0.0431373 0.0431373
+map_Kd MetalPanel03.jpg
+newmtl Magazines07
+Ns 50
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Magazines07.jpg
+newmtl Magazines06
+Ns 50
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Magazines06.jpg
+newmtl Magazines04
+Ns 50
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.0431373 0.0431373 0.0431373
+map_Kd Magazines04.jpg
+newmtl Magazines05
+Ns 50
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.0862745 0.0862745 0.0862745
+map_Kd Magazines05.jpg
+newmtl Preview
+Ns 50
+Ka 0 0 0
+Kd 0.913572 0.210242 0.485092
+Ks 0.118235 0.141026 0.178869
+newmtl ChairLeather
+Ns 0.01
+Ka 0.2 0.2 0.1
+Kd 1 1 1
+Ks 0.109804 0.109804 0.109804
+map_Kd ChairLeather.jpg
+newmtl FrontMagazine3
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd 247_15_08_10_3_01_32_0.jpg
+newmtl CardBoard
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd Cardboard.jpg
+newmtl FrontMagazine4
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd 1a.jpg
+newmtl FrontMagazine2
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0.0705882 0.0705882 0.0705882
+map_Kd 247_21_03_09_3_57_19_0.jpg
+newmtl FrontMagazine1
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd 4a.jpg
+newmtl FrontNewsPaper1
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0 0 0
+map_Kd TodayNews.jpg
+newmtl CashRegister
+Ns 0.01
+Ka 0.6 0.6 0.6
+Kd 1 1 1
+Ks 0.0117647 0.0117647 0.0117647
+map_Kd CashRegister.jpg

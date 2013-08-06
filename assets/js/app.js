@@ -23,6 +23,30 @@
 		});
 	}
 	
+	function render(a){
+		
+	}
+	
+	/*
+	 * load loadTexture
+	 */
+	function loadTexture(path, callback){
+		var texture = new JSC3D.Texture(bj.createId(16));
+		texture.onready = function(){
+			var scene = viewer.getScene();
+			var mesh = scene.getChildren()[0];
+			mesh.init();
+			mesh.setTexture(this);
+			console.log(mesh);
+			mesh.setMaterial(mesh.aterial);
+			viewer.update();
+			if(callback){
+				callback();
+			}
+		}
+		texture.createFromUrl(path, true); 
+	}
+	 
 	/*
 	 * load object data and render it
 	 */
@@ -35,21 +59,38 @@
 		var bgColorTop = op.bgColorTop || '#ffffaa';
 		var bgColorBottom = op.bgColorBottom || '#666633';
 		var renderMode = op.renderMode || 'smooth';
+		var textures = opts.textures || [];
 		
-		viewer.setParameter('SceneUrl', file);
+		viewer.setParameter('SceneUrl', '');
 		viewer.setParameter('InitRotationX', x);
 		viewer.setParameter('InitRotationY', y);
 		viewer.setParameter('InitRotationZ', z);
-		viewer.setParameter('ModelColor', modelColor);
 		viewer.setParameter('BackgroundColor1', bgColorTop);
 		viewer.setParameter('BackgroundColor2', bgColorBottom);
 		viewer.setParameter('RenderMode', renderMode);
-		viewer.setParameter('MipMapping', 'off');
+		viewer.setParameter('MipMapping', 'on');
 		viewer.setParameter('enableDefaultInputHandle', true);
 		viewer.setMouseUsage('rotate');
 		viewer.init();
-		viewer.update();	
+		viewer.update();
 		
+		var oLoader = new JSC3D.ObjLoader(function(scene){
+			viewer.setDefinition('high');
+			viewer.replaceScene(scene);
+			if(textures.length>0){
+				for(var i=0;i<textures.length;i++){
+					loadTexture(textures[i], function(){
+						if(!!textures[i+1]){
+							loadTexture(textures[i+1]);
+						}
+					});
+				}
+			}
+			app.panel.View.onloaded();
+			viewer.update();
+		});
+		oLoader.loadFromUrl(file);
+
 		initState.renderMode = renderMode;
 		initState.modelColor = modelColor;
 	}
@@ -65,12 +106,6 @@
 		init : function(){
 			canvas = document.getElementById('cv');
 			viewer = new JSC3D.Viewer(canvas);
-			loadObject('resources/objects/statue/TuongCTQ.obj', {
-				x : 270, 
-				y : 360,
-				z : 0
-			});
-
 			app.viewer = viewer;
 			app.panel.View.start();
 		},

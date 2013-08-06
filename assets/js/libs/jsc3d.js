@@ -4691,6 +4691,7 @@ JSC3D.ObjLoader.prototype.parseObj = function(scene, data) {
 JSC3D.ObjLoader.prototype.parseMtl = function(data) {
 	var mtls = {};
 	var curMtlName = '';
+	data = data.replace(/(\r)/gm,"");
 
 	var lines = data.split(/[ \t]*\r?\n[ \t]*/);
 	for(var i=0; i<lines.length; i++) {

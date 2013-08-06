@@ -21,13 +21,13 @@ var app = window.app || {};
 	}
 	function zoom(k){
 		viewer = getViewer();
-		if(!!viewer){
-			viewer.zoomFactor += k;
-			if(viewer.zoomFactor<5){
-				viewer.zoomFactor = 5;
+		if(!!viewer && viewer.zoomFactor>0){
+			var z = viewer.zoomFactor/50;
+			if(k>0){
+				viewer.zoomFactor+=z;
 			}
-			else if(viewer.zoomFactor>500){
-				viewer.zoomFactor = 500;
+			else{
+				viewer.zoomFactor-=z;
 			}
 			viewer.update();
 		}
@@ -81,6 +81,10 @@ var app = window.app || {};
 		L.View.resetPanel();
 	}
 	
+	function reload(){
+		reset();
+	}
+	
 	function switchMode(mode){
 		viewer = getViewer();
 		viewer.setRenderMode(mode);
@@ -118,7 +122,7 @@ var app = window.app || {};
 			bj.exitEvent(e);
 		}
 	}
-				
+
 	var L = app.panel = bj.createModel({
 		init : function(){
 			
@@ -127,8 +131,15 @@ var app = window.app || {};
 		rotate : rotate,
 		move : translate,
 		reset : reset,
+		reload : reload,
 		switchMode : switchMode,
 		onkeydown : onkeydown,
-		onmousewheel : onmousewheel
+		onmousewheel : onmousewheel,
+		load : function(ob){
+			if(!!ob){
+				this.View.onloading();
+				return app.loadObj(ob.path, ob.config);		
+			}	
+		}
 	});
 })();
