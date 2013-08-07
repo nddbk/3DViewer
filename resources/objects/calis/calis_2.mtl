@@ -1,0 +1,62 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 19.06.2013 10:25:19
+
+newmtl tacon
+	Ns 10.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.28 1.00
+	Kd 0.00 0.28 1.00
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl platilla
+	Ns 10.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.13 0.45 0.00
+	Kd 0.13 0.45 0.00
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl suela
+	Ns 10.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.17 0.00 0.16
+	Kd 0.17 0.00 0.16
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl piel
+	Ns 10.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.56 0.88 0.00
+	Kd 0.56 0.88 0.00
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl broche
+	Ns 10.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.54 0.00 0.00
+	Kd 0.54 0.00 0.00
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00

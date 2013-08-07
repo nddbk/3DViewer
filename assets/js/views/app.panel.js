@@ -14,8 +14,8 @@ var app = window.app || {};
 	var objList = [
 		{
 			title : 'Liberty',
-			image : 'resources/Liberty.png', 
-			path : 'resources/objects/LibertyStatue/LibertStatue.obj'
+			image : 'resources/liberty.png', 
+			path : 'resources/objects/liberty/LibertStatue.obj'
 		},
 		{
 			title : 'Cathedral',
@@ -27,9 +27,9 @@ var app = window.app || {};
 			}
 		},
 		{
-			title : 'CTQ statue - High quality',
+			title : 'CTQ statue',
 			image : 'resources/statue.png', 
-			path : 'resources/objects/statue/CTQ.obj', 
+			path : 'resources/objects/statue/TuongCTQsmall.obj', 
 			config : {
 				x : 270,
 				y : 360,
@@ -37,19 +37,19 @@ var app = window.app || {};
 			}
 		},
 		{
-			title : 'CTQ statue - Simple version',
-			image : 'resources/statue-base.png', 
-			path : 'resources/objects/statue/CTQsmall.obj',
+			title : 'Calis',
+			image : 'resources/calis.png', 
+			path : 'resources/objects/calis/calis_2.obj',
 			config : {
-				x : 270,
-				y : 360,
+				x : 0,
+				y : 0,
 				z : 0
 			}
 		},
 		{
-			title : 'News Stand',
-			image : 'resources/stand.png', 
-			path : 'resources/objects/NewsStand/NewsStand.obj'
+			title : 'Shoe',
+			image : 'resources/shoe.png', 
+			path : 'resources/objects/shoe/002.obj'
 		}
 	];
 	
