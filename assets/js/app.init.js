@@ -5,21 +5,21 @@
 */
 
 ;(function(){
-	
-	bj.setOnloadCallback(function(){
-		
-		bj.listen(document, 'click', function(e){
-			var tg = bj.getEvtTag(e);
-			if(bj.isElement(tg)){
-				app.onclick(e, tg);
-			}
-		});
 
-		bj.setOnresizeCallback(function(){
-			var ws = bj.getWindowSize();
-			return app.onresize(ws.w, ws.h);
-		});	
-	});
-	
-	app.init();
+  bj.setOnloadCallback(function(){
+
+    bj.listen(document, 'click', function(e){
+      var tg = bj.getEvtTag(e);
+      if(bj.isElement(tg)){
+        app.onclick(e, tg);
+      }
+    });
+
+    bj.setOnresizeCallback(function(){
+      var ws = bj.getWindowSize();
+      return app.onresize(ws.w, ws.h);
+    });
+  });
+
+  app.init();
 })();
