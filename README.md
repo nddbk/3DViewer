@@ -1,8 +1,6 @@
 3DViewer
 ========
 
-Web-based 3DViewer tool
+Web-based 3DViewer tool, using JSC3D.
 
-Integrated with Threejs, JSC3D and BellaJS.
-
-Demo : http://bjlab.us/3DViewer/
+Demo : http://ndaidong.github.io/3DViewer
