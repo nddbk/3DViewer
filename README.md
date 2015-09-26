@@ -3,7 +3,7 @@
 
 Web-based 3DViewer tool, using JSC3D.
 
-Demo : http://ndaidong.github.io/3DViewer
+[View demo](http://ndaidong.github.io/3DViewer) (may take a little time while loading 3D models)
 
 Screenshot:
 
